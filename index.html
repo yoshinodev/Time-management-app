@@ -7,18 +7,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
     rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
     <body>
+      <div id="wrapper">
         <div class="header">
-            <button class="nav-toggle" alt="horizontal bars to represent the menu that can be toggled when navigating the webpage">
+          <div class="navbar fixed-top navbar-dark bg-dark">
+            <button id="menu-toggle" alt="horizontal bars to represent the menu that can be toggled when navigating the webpage">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="#default" class="logo">Logo brand</a>
-            <div class="header-right">
+            <a href="#default" class="navbar-brand">Logo brand</a>
+            
                 <div class="dropdown-header">
-                    <button onclick="myFunction()" class="dropbtn">User workspace <i class="fa fa-caret-down"></i></button>
-                    <div id="Dropdown-menu" class="dropdown-content">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false">User workspace</button><i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                       <a class="manage-dropdown" href="#manage">
                         <div class="dropdown-menu-header">
                           <div class="dropdown-item-between">
@@ -28,6 +36,7 @@
                             </span>
                           </div>
                         </div>
+                        <div class="dropdown-divider"></div>
                         <div class="dropdown-menu-sub-header">
                           <a class="select-workspace">
                             <span class="username-workspace">User name Workspace</span>
@@ -63,11 +72,11 @@
                 </ul>
               </li>
             </ul>
-                </div>
-                    </div> <!-- este div refere-se somente à parte direita do header  -->
           </div>
-          <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+                    </div> <!-- this div refers only to the right header  -->
+          
+          <div id="sidebar-wrapper" class="sidebar">
             <ul class="sidebarmenu">
             <li class="home-start"><a href="#"><i class="fas fa-home"> Home</i></a></li>
             <li class="timetracker-start"><a href="#"><i class="fas fa-stopwatch"> TimeTracker</i></a></li>
@@ -83,15 +92,30 @@
             <li class="settings-start"><a href="#"><i class="fa-solid fa-gear"> Settings</i></a></li>
           </ul>
           </div>
-          <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776;</button>
-            <h2>Collapsed Sidebar</h2>
-            <p>Content...</p>
+          <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1g-12">
+                  <h1>Sidebar skadksdkw</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Quasi fuga sit vel ab reiciendis. Reiciendis error cum cumque optio debitis voluptatibus quas velit modi vero,
+                     deleniti facilis quis corporis perferendis.</p>
+  
+                </div>
+              </div>
+            </div>
+  
           </div>
+      </div>
 
 
 
 
-
+          <script>
+            $("#menu-toggle").click(function (e){
+              e.preventDefault();
+              $("#wrapper").toggleClass("menuDisplayed");
+            });
+          </script>
     </body>
 </html>
