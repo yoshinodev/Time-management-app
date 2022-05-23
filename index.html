@@ -16,21 +16,45 @@
             </button>
             <a href="#default" class="logo">CompanyLogo</a>
             <div class="header-right">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown <i class="fa fa-caret-down"></i></button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                <div class="dropdown-header">
+                    <button onclick="myFunction()" class="dropbtn">User workspace <i class="fa fa-caret-down"></i></button>
+                    <div id="Dropdown-menu" class="dropdown-content">
+                      <a class="manage-dropdown" href="#manage">
+                        <div class="dropdown-menu-header">
+                          <div class="dropdown-item-between">
+                            <div class="dropdown-header-left">Workspaces</div>
+                            <span class="dropdown-header-manage">
+                            <a href="#">Manage</a>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="dropdown-menu-sub-header">
+                          <a class="select-workspace">
+                            <span class="username-workspace">User name Workspace</span>
+                            <span class="icon-and-status">
+                              <i class="fas fa-check"></i>
+                              <span class="status-inline"> Active</span>
+                            </span>
+                          </a>
+                        </div>
                     </div>
-                  </div>
-            </div>
+                </div>
+                <div class="outter-avatar">
+                  <a class="dropdown-avatar">
+                    <avatar>
+                      <div class="center-avatar">
+                        <span>user inicials</span>
+                      </div>
+                    </avatar>
+                  </a>
+                </div>
+                    </div> <!-- este div refere-se somente à parte direita do header  -->
           </div>
           <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+            <a href="#">Home</a>
+            <a href="#">TimeTracker</a>
+            <a href="#">TimeSheet</a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
@@ -43,7 +67,7 @@
           </div>
           
           <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
             <h2>Collapsed Sidebar</h2>
             <p>Content...</p>
           </div>
