@@ -40,6 +40,8 @@
                     </div>
                 </div>
                 <div class="outter-avatar">
+                  <ul class="header-dropdown">
+                  <li class="nav-item dropdown">
                   <a class="dropdown-avatar">
                     <avatar>
                       <div class="center-avatar">
@@ -47,25 +49,40 @@
                       </div>
                     </avatar>
                   </a>
+                </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="#">My profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
                 </div>
                     </div> <!-- este div refere-se somente à parte direita do header  -->
           </div>
           <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">TimeTracker</a>
-            <a href="#">TimeSheet</a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+            <ul class="sidebarmenu">
+            <li class="home-start"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li class="timetracker-start"><a href="#"><i class="fas fa-stopwatch"></i> TimeTracker</a></li>
+            <li class="timesheet-start"><a href="#"><i class="fas fa-file-spreadsheet"></i> TimeSheet</a></li>
+            <li class="analyze-start"><span class="divider">Analyze</span></li>
+            <li class="dashboard-start"><a href="#">DashBoard</a></li>
+            <li class="reports-start"><a href="#">Reports</a></li>
+            <li class="management-start"><span class="divider">Management</span></li>
+            <li class="projects-start"><a href="#">Projects</a></li>
+            <li class="trello-start"><a href="#">Trello</a></li>
+            <li class="ideas-start"><a href="#">Ideas</a></li>
+            <li class="tags-start"><a href="#">Tags</a></li>
+            <li class="settings-start"><a href="#">Settings</a></li>
+          </ul>
           </div>
-          
           <div id="main">
             <button class="openbtn" onclick="openNav()">&#9776;</button>
             <h2>Collapsed Sidebar</h2>
