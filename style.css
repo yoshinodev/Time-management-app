@@ -32,12 +32,12 @@
 
 /* Sidebar styling */
 .sidebar-nav{
-    padding:0;
+    padding: 0;
     list-style: none;
 }
 .sidebar-nav li{
-    text-indent: 20px;
-    line-height: 40px;
+    list-style: none;
+    line-height: 50px;
     text-decoration: none;
 }
 
@@ -45,8 +45,10 @@
     display: block;
     text-decoration: none;
     color: #ddd;
+    list-style: none;
 }
 
 .sidebar-nav li a:hover{
-    background: #16A;
+    background: rgb(26, 118, 194);
 }
+
