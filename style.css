@@ -2,13 +2,18 @@
 #sidebar-wrapper{
     z-index: 1;
     position: absolute;
-    width: 0px; /* 65px with only the icons */
+     width: 60px;
     height: 100%;
     overflow-y: hidden;
     background: #2C3E50;
     border: 2px solid red;
     opacity: 0.9;
     padding-top: 100px;
+    list-style: none;
+    text-decoration: none;
+    left: 0;
+    overflow-x: hidden;
+    text-overflow: clip;
 }
 
 /* main content */
@@ -16,6 +21,7 @@
     width: 100%;
     position: absolute;
     padding: 15px;
+    padding-left: 60px;
     border: 5px solid green;
     height: 100%;
     padding-top: 80px;
@@ -24,6 +30,8 @@
 /* Change the width of the sidebar to display it */
 #wrapper.menuDisplayed  #sidebar-wrapper{
     width: 250px;
+    align-self: center;
+    justify-self: center;
 }
 
 #wrapper.menuDisplayed #page-content-wrapper{
@@ -31,24 +39,84 @@
 }
 
 /* Sidebar styling */
-.sidebar-nav{
-    padding: 0;
+
+#sidebar-wrapper li{
     list-style: none;
-}
-.sidebar-nav li{
-    list-style: none;
-    line-height: 50px;
+    line-height: 40px;
     text-decoration: none;
+    
 }
 
-.sidebar-nav li a{
+#sidebar-wrapper li a{
     display: block;
     text-decoration: none;
     color: #ddd;
     list-style: none;
+    line-height: 50px;
 }
 
-.sidebar-nav li a:hover{
-    background: rgb(26, 118, 194);
+.hiddensp {
+    display: none;
+    margin-left: 15px;
+}
+#sidebar-wrapper li a:hover{
+    background-color: rgb(26, 118, 194);
+}
+#sidebar-wrapper i{
+    padding-right: 10px;
+    margin-left: -10px;
+  }
+
+#menu-toggle{
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px 5px;
+    transition: 0.5s;
+    transition-property: color;
+    background-color: #23252B;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.navbar-brand{
+    margin-left: 3rem;
+}
+
+.menu-item{
+    color: white;
+    list-style: none;
+}
+#menuDropdown{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    font-size: 20px;
+    margin: -0.5rem -8rem;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu {
+    position: absolute; 
+    transform: translate3d(0px, 38px, 0px); 
+    top: 0px; 
+    left: -8rem;
+     will-change: transform;
 }
 

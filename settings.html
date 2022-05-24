@@ -19,37 +19,27 @@
       <div id="wrapper">
         <div class="header">
           <div class="navbar fixed-top navbar-dark bg-dark">
-            <button id="menu-toggle" alt="horizontal bars to represent the menu that can be toggled when navigating the webpage">
+            <button id="menu-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            alt="horizontal bars to represent the menu that can be toggled when navigating the webpage">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="#default" class="navbar-brand">Logo brand</a>
+              <a class="navbar-brand mr-auto" href="#">Logo brand</a>
 
-              <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> workspace</button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">    
-                      <a class="dropdown-item" href="#manage">
-                            <span class="dropdown-item">Workspaces</span>
-                            <a class="dropdown-item" href="#">Manage</a>
-                      </a>
-                        <div class="dropdown-divider"></div>
-                          <div class="selected-workspace">
-                            <a class="dropdown-item" href="#"><span class="username-workspace">User name Workspace</span><span class="icon-and-status">
-                                <i class="fas fa-check"></i>
-                                <span class="status-inline"> Active</span></a>
-                            </a>
-                          </div>
-                      </div>
-                </div>
                 <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
+                  <ul class="menu">
+                    <li class="menu-item">
+                      <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                       <div class="outter-avatar">
                         <ul class="header-dropdown">
@@ -79,25 +69,25 @@
         </div> 
           <div id="sidebar-wrapper" class="sidebar">
             <ul class="sidebarmenu">
-              <li class="home-start"><a href="./index.html"><i class="fas fa-home"> Home</i></a></li>
-              <li class="timetracker-start"><a href="./timetracker.html"><i class="fas fa-stopwatch"> TimeTracker</i></a></li>
-              <li class="timesheet-start"><a href="./timesheet.html"><i class="fas fa-file-lines"> TimeSheet</i></a></li>
-              <li class="analyze-start"><span class="divider">Analyze</span></li>
-              <li class="dashboard-start"><a href="./dashboard.html"><i class="fas fa-border-all"> DashBoard</i></a></li>
-              <li class="reports-start"><a href="./reports.html"><i class="fas fa-chart-line"> Reports</i></a></li>
-              <li class="management-start"><span class="divider">Management</span></li>
-              <li class="projects-start"><a href=".projects/html"><i class="fas fa-briefcase"> Projects</i></a></li>
-              <li class="trello-start"><a href="./trello.html"><i class="fa-brands fa-trello"> Trello</i></a></li>
-              <li class="ideas-start"><a href="./ideas.html"><i class="fas fa-lightbulb"> Ideas</i></a></li>
-              <li class="tags-start"><a href="./tags.html"><i class="fas fa-tags"> Tags</i></a></li>
-              <li class="settings-start"><a href="./settings.html"><i class="fa-solid fa-gear"> Settings</i></a></li>
+              <li class="home-start"><a href="./index.html"><i class="fas fa-home"><span class="hiddensp"> Home</span></i></a></li>
+              <li class="timetracker-start"><a href="./timetracker.html"><i class="fas fa-stopwatch"><span class="hiddensp"> TimeTracker</span></i></a></li>
+              <li class="timesheet-start"><a href="./timesheet.html"><i class="fas fa-file-lines"><span class="hiddensp"> TimeSheet</span></i></a></li>
+              <li class="analyze-start"><span class="hiddensp">Analyze</span></li>
+              <li class="dashboard-start"><a href="./dashboard.html"><i class="fas fa-border-all"><span class="hiddensp"> DashBoard</span></i></a></li>
+              <li class="reports-start"><a href="./reports.html"><i class="fas fa-chart-line"><span class="hiddensp"> Reports</span></i></a></li>
+              <li class="management-start"><span class="hiddensp">Management</span></li>
+              <li class="projects-start"><a href="./projects.html"><i class="fas fa-briefcase"><span class="hiddensp"> Projects</span></i></a></li>
+              <li class="trello-start"><a href="./trello.html"><i class="fa-brands fa-trello"><span class="hiddensp"> Trello</span></i></a></li>
+              <li class="ideas-start"><a href="./ideas.html"><i class="fas fa-lightbulb"><span class="hiddensp"> Ideas</span></i></a></li>
+              <li class="tags-start"><a href="./tags.html"><i class="fas fa-tags"><span class="hiddensp"> Tags</span></i></a></li>
+              <li class="settings-start"><a href="./settings.html"><i class="fa-solid fa-gear"><span class="hiddensp"> Settings</span></i></a></li>
             </ul>
           </div>
           <div id="page-content-wrapper">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-1g-12">
-                  <h1>SETTINGS CONTENT GOES HERE</h1>
+                  <h1>HOME PAGE CONTENT GOES HERE</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                     Quasi fuga sit vel ab reiciendis. Reiciendis error cum cumque optio debitis voluptatibus quas velit modi vero,
                      deleniti facilis quis corporis perferendis.</p>
@@ -115,6 +105,16 @@
             $("#menu-toggle").click(function (e){
               e.preventDefault();
               $("#wrapper").toggleClass("menuDisplayed");
+              if ($("#sidebar-wrapper").width() <= 60) { //your chosen mobile res
+                $('.hiddensp').hide();
+              } else {
+                $(".hiddensp").show();
+              }
+            });
+            
+            $(document).ready(function(){$("#menuDropdown").click(function(){
+        $(this).next(".dropdown-menu").slideToggle();
+      });   
             });
           </script>
     </body>

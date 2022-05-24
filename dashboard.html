@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time UP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+    <body>
+      <div id="wrapper">
+        <div class="header">
+          <div class="navbar fixed-top navbar-dark bg-dark">
+            <button id="menu-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            alt="horizontal bars to represent the menu that can be toggled when navigating the webpage">
+                <i class="fas fa-bars"></i>
+            </button>
+              <a class="navbar-brand mr-auto" href="#">Logo brand</a>
+
+                <div class="dropdown">
+                  <ul class="menu">
+                    <li class="menu-item">
+                      <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                      <div class="outter-avatar">
+                        <ul class="header-dropdown">
+                          <li class="nav-item dropdown">
+                            <a class="dropdown-avatar">
+                          <avatar>
+                          <div class="center-avatar">
+                            <span>user inicials</span>
+                          </div>
+                          </avatar>
+                            </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                              <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                          </ul>
+                          </li>
+                        </ul>
+                      </div>
+          </div>
+        </div> 
+          <div id="sidebar-wrapper" class="sidebar">
+            <ul class="sidebarmenu">
+              <li class="home-start"><a href="./index.html"><i class="fas fa-home"><span class="hiddensp"> Home</span></i></a></li>
+              <li class="timetracker-start"><a href="./timetracker.html"><i class="fas fa-stopwatch"><span class="hiddensp"> TimeTracker</span></i></a></li>
+              <li class="timesheet-start"><a href="./timesheet.html"><i class="fas fa-file-lines"><span class="hiddensp"> TimeSheet</span></i></a></li>
+              <li class="analyze-start"><span class="hiddensp">Analyze</span></li>
+              <li class="dashboard-start"><a href="./dashboard.html"><i class="fas fa-border-all"><span class="hiddensp"> DashBoard</span></i></a></li>
+              <li class="reports-start"><a href="./reports.html"><i class="fas fa-chart-line"><span class="hiddensp"> Reports</span></i></a></li>
+              <li class="management-start"><span class="hiddensp">Management</span></li>
+              <li class="projects-start"><a href="./projects.html"><i class="fas fa-briefcase"><span class="hiddensp"> Projects</span></i></a></li>
+              <li class="trello-start"><a href="./trello.html"><i class="fa-brands fa-trello"><span class="hiddensp"> Trello</span></i></a></li>
+              <li class="ideas-start"><a href="./ideas.html"><i class="fas fa-lightbulb"><span class="hiddensp"> Ideas</span></i></a></li>
+              <li class="tags-start"><a href="./tags.html"><i class="fas fa-tags"><span class="hiddensp"> Tags</span></i></a></li>
+              <li class="settings-start"><a href="./settings.html"><i class="fa-solid fa-gear"><span class="hiddensp"> Settings</span></i></a></li>
+            </ul>
+          </div>
+          <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1g-12">
+                  <h1>HOME PAGE CONTENT GOES HERE</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Quasi fuga sit vel ab reiciendis. Reiciendis error cum cumque optio debitis voluptatibus quas velit modi vero,
+                     deleniti facilis quis corporis perferendis.</p>
+  
+                </div>
+              </div>
+            </div>
+        </div>    
+      </div>
+
+
+
+
+          <script>
+            $("#menu-toggle").click(function (e){
+              e.preventDefault();
+              $("#wrapper").toggleClass("menuDisplayed");
+              if ($("#sidebar-wrapper").width() <= 60) { //your chosen mobile res
+                $('.hiddensp').hide();
+              } else {
+                $(".hiddensp").show();
+              }
+            });
+            
+            $(document).ready(function(){$("#menuDropdown").click(function(){
+        $(this).next(".dropdown-menu").slideToggle();
+      });   
+            });
+          </script>
+    </body>
+</html>
