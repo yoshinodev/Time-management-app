@@ -87,16 +87,41 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-1g-12">
-                  <h1>HOME PAGE CONTENT GOES HERE</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Quasi fuga sit vel ab reiciendis. Reiciendis error cum cumque optio debitis voluptatibus quas velit modi vero,
-                     deleniti facilis quis corporis perferendis.</p>
-  
+                  <div id="content-wrapper" style="display: flex; flex-direction: column; flex: 1 1 0%; overflow-y: auto;">
+                    <h1>TRELLO PAGE CONTENT GOES HERE</h1>
+                      <div class="board-start">
+                        <h3>Your space looks a little empty..</h3>
+                        <p>Do you wish to create a new board?</p>
+                        <button type="button" id="modalbtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a board</button>
+                      </div>
+                  </div>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <label for="modal-title" id="exampleModalLabel">Your title here..</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Write your title here" required="" data-test-id="create-board-title-input" 
+                          aria-invalid="true" aria-required="true" autocomplete="off" autocorrect="off" data-lpignore="true" spellcheck="false" value="">
+                          <div class="infomodaltitle">
+                          <span role="img" aria-label="wave" class="emoji">👋</span>
+                          <p>The tittle is mandatory..</p>
+                           </div>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>    
-      </div>
+          </div>
 
 
 
@@ -116,6 +141,11 @@
         $(this).next(".dropdown-menu").slideToggle();
       });   
             });
+            $("#modalbtn").click(function (e) {
+              e.preventDefault();
+              $('#exampleModal').modal('show');
+            })
+            
           </script>
     </body>
 </html>
