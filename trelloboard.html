@@ -87,41 +87,59 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-1g-12">
-                  <div id="content-wrapper" style="display: flex; flex-direction: column; flex: 1 1 0%; overflow-y: auto;">
-                    <h1>TRELLO PAGE CONTENT GOES HERE</h1>
-                      <div class="board-start">
-                        <h3>Your space looks a little empty..</h3>
-                        <p>Do you wish to create a new board?</p>
-                        <button type="button" id="modalbtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a board</button>
-                      </div>
-                  </div>
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <label for="modal-title" id="exampleModalLabel">Your title here..</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Write your title here" required="" data-test-id="create-board-title-input" 
-                          aria-invalid="true" aria-required="true" autocomplete="off" autocorrect="off" data-lpignore="true" spellcheck="false" value="">
-                          
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <header>
+                        <!-- the width will be auto and came from the previous tittle given -->
+                        <h1 id="boardtittle" contentEditable="true" style="width: 19%;">Your tittle</h1>
+                    </header>
+                    <!-- just a skeleton of the drag and drop cards -->
+                    <section class="p-4 d-flex justify-content-left w-40" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div data-mdb-sortable="sortable" class="sortable-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <h2 id="trelloheader" contentEditable="true">To do</h2>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 1</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 2</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                 draggable="true" ondragstart="drag(event)">Item 5</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 3</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 4</div>
+                                </div>
+                      
+                        <div data-mdb-sortable="sortable" class="sortable-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <h2 id="trelloheader" contentEditable="true">Doing</h2>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 1</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 2</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item"contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 5</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 3</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)">Item 4</div>
                         </div>
-                        <div class="modal-body">
-                          <div class="infomodaltitle">
-                          <span role="img" aria-label="wave" class="emoji">👋</span>
-                          <p>The tittle is mandatory..</p>
-                           </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                      
+                        <div data-mdb-sortable="sortable" class="sortable-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <h2 id="trelloheader" contentEditable="true">Done</h2>
+                                <div class="sortable-item" data-mdb-id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">Item 1</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item"  contentEditable="true"
+                                draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">Item 2</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">Item 5</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">Item 3</div>
+                                <div class="sortable-item" data-mdb-id="sortable-item" id="sortable-item" contentEditable="true"
+                                draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">Item 4</div>
+                                </div>
+                      </section>
                 </div>
               </div>
             </div>
-          </div>
+        </div>    
+      </div>
 
 
 
@@ -130,7 +148,7 @@
             $("#menu-toggle").click(function (e){
               e.preventDefault();
               $("#wrapper").toggleClass("menuDisplayed");
-              if ($("#sidebar-wrapper").width() <= 60) { //your chosen mobile res
+              if ($("#sidebar-wrapper").width() <= 60) { 
                 $('.hiddensp').hide();
               } else {
                 $(".hiddensp").show();
@@ -141,11 +159,19 @@
         $(this).next(".dropdown-menu").slideToggle();
       });   
             });
-            $("#modalbtn").click(function (e) {
-              e.preventDefault();
-              $('#exampleModal').modal('show');
-            })
-            
+            function allowDrop(ev) {
+   ev.preventDefault();
+ }
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.sortable);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
           </script>
     </body>
 </html>
