@@ -161,7 +161,9 @@
                     </table>
                   </div>
                   <div class="cl-page-component-wrapper cl-d-lg-flex cl-d-print-none">
-                    <button data-cy="add-new-row" id="plusrow" class="cl-btn cl-btn-outline-light cl-d-block cl-d-lg-inline-block cl-mr-0 cl-mr-lg-2 cl-mb-2 cl-mb-lg-0 cl-min-height-40 cl-max-height-40">
+                    <button data-cy="add-new-row" id="plusrow" 
+                    class="cl-btn cl-btn-outline-light cl-d-block cl-d-lg-inline-block cl-mr-0 cl-mr-lg-2 cl-mb-2 cl-mb-lg-0 cl-min-height-40 cl-max-height-40"
+                     >
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
@@ -190,7 +192,7 @@
       });   
             });
             var counter = 1;
-jQuery('#plusrow').click(function(event){
+        /*     jQuery('#plusrow').click(function (event){
     event.preventDefault();
     counter++;
     var newRow = jQuery('<tr><td> Tittle ' +
@@ -207,7 +209,32 @@ jQuery('#plusrow').click(function(event){
         counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
         counter + '"/></td></tr>');
     jQuery('table#timesheetTable').append(newRow);
+    return newRow;
+}); */
+$(function() {
+    var table = document.getElementById("timesheetTable");
+function newRow1(table){
+    counter++;
+ var NewRow2= $('#timesheetTable').append('<tr><td> Tittle ' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></tr>');
+      };
+    $('#plusrow').on('click', function (e) {
+    e.preventDefault();
+    newRow1(table);
+  });
 });
+
           </script>
     </body>
 </html>
