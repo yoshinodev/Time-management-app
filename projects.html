@@ -90,7 +90,7 @@
                   <h1>PROJECTS PAGE CONTENT GOES HERE</h1>
                   <div class="datatable" data-mdb-edit="true" data-mdb-hover="true" data-mdb-selectable="true" data-mdb-multi="true" 
                   data-mdb-sm="true" data-mdb-fixed-header="true">
-                  <table class="table">
+                  <table class="table" id="projectsTable">
                     <thead>
                       <tr>
                         <th scope="col">
@@ -99,8 +99,8 @@
                           </div>
                         </th>
                         <th scope="col">Project</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" colspan="2">Description</th>
+                        <th scope="col" colspan="2" id="status">Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -110,9 +110,18 @@
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                           </div>
                         </th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Project 1</td>
+                        <td colspan="2">....</td>
+                        <td>
+                          <label for="pickstatus">Status: </label>
+
+                          <select name="status" id="status">
+                            <option value="Todo">To do  &#9748;</option>
+                            <option value="Doing">Doing &#8987;</option>
+                            <option value="Reviewing">Reviewing &#10024;</option>
+                            <option value="Done">Done &#9989;</option>
+                          </select>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
@@ -120,9 +129,18 @@
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                           </div>
                         </th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Project 2</td>
+                        <td colspan="2">...</td>
+                        <td>
+                          <label for="pickstatus">Status: </label>
+
+                          <select name="status" id="status">
+                            <option value="Todo">To do  &#9748;</option>
+                            <option value="Doing">Doing &#8987;</option>
+                            <option value="Reviewing">Reviewing &#10024;</option>
+                            <option value="Done">Done &#9989;</option>
+                          </select>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
@@ -130,12 +148,23 @@
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                           </div>
                         </th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>Project 3</td>
+                        <td colspan="2">....</td>
+                        <td>
+                          <label for="pickstatus">Status: </label>
+
+                          <select name="status" id="status">
+                            <option value="Todo">To do  &#9748;</option>
+                            <option value="Doing">Doing &#8987;</option>
+                            <option value="Reviewing">Reviewing &#10024;</option>
+                            <option value="Done">Done &#9989;</option>
+                          </select>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <button type="button" class="btn btn-primary" id="addproject">Add project</button>
                 </div>
               </div>
             </div>

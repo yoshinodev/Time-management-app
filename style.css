@@ -124,6 +124,12 @@ body {
      will-change: transform;
 }
 
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    text-align: center;
+}
 .sortable-list {
     width: 371px;
     max-width: 100%;
@@ -179,4 +185,24 @@ section {
     background: #292b33;
     color: #ddd;
     border-color: #ddd;
+}
+
+#projectsTable {
+    background:#32475d;
+    border: 1px solid #ddd ;
+    color: #ddd;
+    margin-left: 200px;
+    margin-top: 60px;
+    width: 70%;
+}
+
+#status {
+    justify-self: center;
+    text-align: center;
+    width: 95px;
+}
+
+#addproject {
+    margin-left: 25%;
+    margin-top: 1%;
 }
