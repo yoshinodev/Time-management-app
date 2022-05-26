@@ -169,3 +169,14 @@ section {
 #boardtittle {
     color: #ddd;
 }
+
+.cl-form-control{
+    background: #2d3d4d;
+    color:#ddd;
+    border-style: none;
+}
+.table-bordered {
+    background: #292b33;
+    color: #ddd;
+    border-color: #ddd;
+}

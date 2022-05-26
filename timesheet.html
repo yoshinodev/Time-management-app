@@ -89,7 +89,7 @@
                 <div class="col-1g-12">
                   <h1>TIMESHEET PAGE CONTENT GOES HERE</h1>
                   <div class="mastertimesheet">
-                    <table class="table table-bordered remove-cell-borders table-timesheet">
+                    <table class="table table-bordered remove-cell-borders table-timesheet" id="timesheetTable">
                       <thead class="cl thead-dark">
                         <tr>
                           <th class="cl-h6 cl-mb-0 cl-pl-lg-3">
@@ -127,7 +127,7 @@
                         <tr timesheet-row class="timesheet-row-component">
                         <td class="cl-px-lg-3 cl-cut-text-wrapper-td">
                           <div class="cl-d-flex cl-justify-content-between cl-align-items-center">
-                            <span>Titlex</span>
+                            <span>Tittlex</span>
                           </div>
                         </td>
                         <td class="cl-timesheet-input-td">
@@ -189,6 +189,25 @@
         $(this).next(".dropdown-menu").slideToggle();
       });   
             });
+            var counter = 1;
+jQuery('#plusrow').click(function(event){
+    event.preventDefault();
+    counter++;
+    var newRow = jQuery('<tr><td> Tittle ' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></td>' +
+        counter + '</td><td><input type="text" autocomplete="off" placement="left" class="cl-form-control cl-form-control-sm cl-timesheet-input cl-timesheet-show-dots' +
+        counter + '"/></td></tr>');
+    jQuery('table#timesheetTable').append(newRow);
+});
           </script>
     </body>
 </html>
