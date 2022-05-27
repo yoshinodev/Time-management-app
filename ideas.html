@@ -100,22 +100,6 @@
 
 
 
-
-          <script>
-            $("#menu-toggle").click(function (e){
-              e.preventDefault();
-              $("#wrapper").toggleClass("menuDisplayed");
-              if ($("#sidebar-wrapper").width() <= 60) { 
-                $('.hiddensp').hide();
-              } else {
-                $(".hiddensp").show();
-              }
-            });
-            
-            $(document).ready(function(){$("#menuDropdown").click(function(){
-        $(this).next(".dropdown-menu").slideToggle();
-      });   
-            });
-          </script>
+      <script src="app.js"></script>
     </body>
 </html>

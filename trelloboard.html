@@ -143,35 +143,6 @@
 
 
 
-
-          <script>
-            $("#menu-toggle").click(function (e){
-              e.preventDefault();
-              $("#wrapper").toggleClass("menuDisplayed");
-              if ($("#sidebar-wrapper").width() <= 60) { 
-                $('.hiddensp').hide();
-              } else {
-                $(".hiddensp").show();
-              }
-            });
-            
-            $(document).ready(function(){$("#menuDropdown").click(function(){
-        $(this).next(".dropdown-menu").slideToggle();
-      });   
-            });
-            function allowDrop(ev) {
-   ev.preventDefault();
- }
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.sortable);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-          </script>
+      <script src="app.js"></script>
     </body>
 </html>
