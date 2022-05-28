@@ -124,7 +124,7 @@ $(function() {
 };
 
 function color(){
-   var random_color = ["#50C5B7", "#F3DAD8", "#BFD7EA", "#F4C3C2", "#E28413", "#F1B5CB", "#E39695", "#E88EED"];
+   var random_color = ["#50C5B7", "#F5E663", "#E28413", "#F4C3C2", "#BFD7EA", "#F1B5CB", "#E39695", "#E88EED"];
 
    if(i > random_color.length){
        i = 0;
